@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index-style.css">
+
+    <style>
+        @font-face { font-family: myfont; src: url('font/myfont-regular.otf'); } 
+        @font-face { font-family: myfont; font-weight: bold; src: url('font/myfont-regular.otf');}
+    </style>
+
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">POKN</a>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>  
+    <section>
+        <img src="images/skyline_shadow3_layer_6.png" id="skyline_shadow3_layer_6">
+        <img src="images/sky_layer_7.png" id="sky_layer_7">
+        <img src="images/skyline_shadow2_layer_5.png" id="skyline_shadow2_layer_5">
+        <img src="images/skyline_shadow_layer_4.png" id="skyline_shadow_layer_4">
+        <img src="images/skyline_layer_3.png" id="skyline_layer_3">
+        <h2 id="text">Projects</h2>
+        <a href="projects.html" id="btn">Explore</a>
+        <img src="images/trees_layer_2.png" id="trees_layer_2">
+        <img src="images/ground_layer_1.png" id="ground_layer_1">
+    </section>
+    <div class="sec" id="sec">
+        <div class="sec-text">
+         <p>
+
+        </p>
+        </div>
+    </div>
+
+    <script>
+        let skyline_shadow3_layer_6 = document.getElementById('skyline_shadow3_layer_6');
+   //     let sky_layer_7 = document.getElementById('sky_layer_7');
+        let skyline_shadow2_layer_5 = document.getElementById('skyline_shadow2_layer_5');
+        let skyline_shadow_layer_4 = document.getElementById('skyline_shadow_layer_4');
+        let skyline_layer_3 = document.getElementById('skyline_layer_3');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let trees_layer_2 = document.getElementById('trees_layer_2');
+        let ground_layer_1 = document.getElementById('ground_layer_1');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll' , function(){
+            let value = window.scrollY;
+            skyline_shadow3_layer_6.style.top = value * 0.7 + 'px';
+        //    sky_layer_7.style.top = value * 1.05 + 'px';
+            skyline_shadow2_layer_5.style.top = value * 0.6 + 'px';
+            skyline_shadow_layer_4.style.top = value * 0.5 + 'px';
+            skyline_layer_3.style.top = value * 0.4 + 'px';
+            trees_layer_2.style.top = value * 0,3 + 'px';
+            ground_layer_1.style.top = value * 0 + 'px';
+            text.style.bottom = value * 3.5 + 'px';
+        //    text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 2 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        }) 
+    </script>
+</body>
+</html>
